@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Focke Wulf F19   : 2012 Emmanuel BARANGER
+   
+     sources          : http://en.wikipedia.org/wiki/Focke-Wulf_F_19
+
+     wingspan         : 10.00 m           ( 32 ft 9 in  )
+     length           : 10.53 m           ( 34 ft 7 in  )
+     height           :  4.15 m           ( 13 ft 7 in  )
+     empty weight     :  1175 kg          ( 2590 lb     )
+     engine           : 2 x Siemens Sh 14 ( 110 hp each )
+     Maximum speed    :   142 km/h        (  76.67 mph  )
+-->
+
+<airplane mass="2590">
+
+  <!-- Approach configuration -->
+  <approach speed="25" aoa="2" fuel="0.2">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+  </approach>
+
+  <!-- Cruise configuration -->
+  <cruise speed="70" alt="0" fuel="0.5">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="0.6"/>
+    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+  </cruise>
+
+  <cockpit x="1.99140" y="0" z="-0.12461"/>
+
+  <fuselage ax="4.93331" ay="0" az="-0.61106" bx="-3.73845" by="0" bz="-0.45185" width="0.7" taper="0.5" midpoint="0.2"/>
+
+  <wing x="-2.12796" y="0" z="0.33652" 
+        chord="2.655" 
+        length="4.844" 
+        taper="0.58"
+        sweep="0"
+        dihedral="0"
+        camber="0.03">
+        <stall aoa="22" width="1" peak="1.5"/>
+        <flap0 start="0.63" end="0.97" lift="1.2" drag="1.1"/>
+
+        <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-output control="FLAP0" prop="/surface-positions/aileron-pos-norm"/>
+  </wing>
+
+  <hstab x="4.47638" y="0" z="0.30525" 
+         chord="1.542" 
+         length="1.953" 
+         taper="0.3"
+         sweep="-16">
+         <stall aoa="20" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.5" drag="1.4"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-4.45386" y="0" z="-0.96262" 
+         chord="1.441"
+         length="2.892"
+         taper="1"
+         sweep="0">
+         <stall aoa="18" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.75" drag="1.35"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+  <!-- Engines   source            : http://en.wikipedia.org/wiki/Siemens_Sh_14
+
+                 name              : Siemens-Halske Sh 14
+                 type              : seven-cylinder air-cooled radial engine
+                 power cruise      : 160 hp at 2200 RPM
+                 weight            : 135 kg  ( 297.6 lb )
+                 displacement      : 7.69 L  ( 469.6 cu in )
+                 compression       : 6.0:1
+  -->
+  <propeller x="-0.73254 " y="1.45209" z="-0.43201" 
+             radius="0.85"
+             mass="297.6" 
+             moment="6"  
+             cruise-speed="70" 
+             cruise-rpm="2000"
+             cruise-alt="1000" 
+             cruise-power="150"
+             takeoff-power="160" 
+             takeoff-rpm="2200">
+             <actionpt x="-0.36914" y="1.45209" z="-0.43201"/>
+             <piston-engine eng-rpm="2200" 
+                            eng-power="160"
+                            displacement="469.6" 
+                            compression="6"/>
+             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
+             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter" />
+             <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos" />
+             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture" src0="0.0" src1="1.0" dst0="0.8" dst1="0.8"/>
+  </propeller>
+  
+  <propeller x="-0.73254 " y="-1.45209" z="-0.43201" 
+             radius="0.85"
+             mass="297.6" 
+             moment="6"  
+             cruise-speed="70" 
+             cruise-rpm="2000"
+             cruise-alt="1000" 
+             cruise-power="150"
+             takeoff-power="160" 
+             takeoff-rpm="2200">
+             <actionpt x="-0.36914" y="-1.45209" z="-0.43201"/>
+             <piston-engine eng-rpm="2200" 
+                            eng-power="160"
+                            displacement="469.6" 
+                            compression="6"/>
+             <control-input control="THROTTLE" axis="/controls/engines/engine[1]/throttle" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
+             <control-input control="STARTER" axis="/controls/engines/engine[1]/starter" />
+             <control-input control="MAGNETOS" axis="/controls/engines/engine[1]/magnetos" />
+             <control-input control="MIXTURE" axis="/controls/engines/engine[1]/mixture" src0="0.0" src1="1.0" dst0="0.8" dst1="0.8"/>
+  </propeller>
+  
+  <!-- Noze wheel -->
+  <gear x="3.31867" y="0" z="-1.74725" 
+        compression="0.01" 
+        spring="0.8">
+        <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
+  </gear>
+
+  <!-- Left wheel -->
+  <gear x="0.82956" y="1.52401" z="-2.00847"
+        compression="0.02" 
+        spring="0.8">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  </gear>
+
+  <!-- Right wheel -->
+  <gear x="0.82956" y="-1.52401" z="-2.00847"
+        compression="0.02" 
+        spring="0.8">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  </gear>
+
+  <tank x="1.8" y="0" z="-1.4" capacity="156" />
+
+  <!-- Mass distribution -->
+  <ballast x=" 4" y="0" z="-1" mass=" 900"/>
+  <ballast x="-3" y="0" z=" 1" mass="-550"/>
+ 
+</airplane>

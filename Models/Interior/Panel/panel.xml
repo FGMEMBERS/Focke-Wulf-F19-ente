@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets> 
+      <x-m>  0.00 </x-m>
+      <y-m> -0.05 </y-m>
+      <z-m>  0.13 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets> 
+      <x-m>  0.00 </x-m>
+      <y-m> -0.12 </y-m>
+      <z-m>  0.09 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Panel/Instruments/tach/tachL.xml</path>
+    <offsets> 
+      <x-m> 0.00 </x-m>
+      <y-m> 0.05 </y-m>
+      <z-m> 0.13 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Panel/Instruments/tach/tachR.xml</path>
+    <offsets> 
+      <x-m> 0.00 </x-m>
+      <y-m> 0.12 </y-m>
+      <z-m> 0.09 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COMPASS -->
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Panel/Instruments/compass/compass.xml</path>
+    <offsets> 
+      <x-m> 0.00 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.08 </z-m>
+    </offsets>
+  </model>
+
+  <!-- SWITCH -->
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Panel/Instruments/Switch/nav-lights.xml</path>
+    <offsets> 
+      <x-m>  0.001 </x-m>
+      <y-m> -0.160 </y-m>
+      <z-m>  0.030 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Panel/Instruments/Switch/instr-lights.xml</path>
+    <offsets> 
+      <x-m>  0.001 </x-m>
+      <y-m> -0.126 </y-m>
+      <z-m>  0.030 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
