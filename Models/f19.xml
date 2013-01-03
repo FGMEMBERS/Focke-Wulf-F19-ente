@@ -47,6 +47,8 @@
     <object-name>trous</object-name>
     <object-name>heliceL</object-name>
     <object-name>heliceR</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
     <object-name>roueA</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
@@ -80,6 +82,8 @@
     <object-name>trous</object-name>
     <object-name>heliceL</object-name>
     <object-name>heliceR</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
     <object-name>roueA</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
@@ -211,6 +215,7 @@
   <animation>
     <name>HeliceCompleteL</name>
     <object-name>heliceL</object-name>
+    <object-name>bolG</object-name>
     <object-name>propdiscL</object-name>
     <object-name>propblurL</object-name>
   </animation>
@@ -275,6 +280,7 @@
   <animation>
     <name>HeliceCompleteR</name>
     <object-name>heliceR</object-name>
+    <object-name>bolD</object-name>
     <object-name>propdiscR</object-name>
     <object-name>propblurR</object-name>
   </animation>
@@ -390,10 +396,10 @@
     <property>surface-positions/left-aileron-pos-norm</property>
     <factor> 15 </factor>
     <axis>
-      <x1-m>  2.26618 </x1-m>
+      <x1-m>  2.22618 </x1-m>
       <y1-m> -4.85809 </y1-m>
       <z1-m>  0.31319 </z1-m>
-      <x2-m>  3.02862 </x2-m>
+      <x2-m>  2.98862 </x2-m>
       <y2-m> -3.20752 </y2-m>
       <z2-m>  0.15307 </z2-m>
     </axis>
@@ -405,10 +411,10 @@
     <property>surface-positions/right-aileron-pos-norm</property>
     <factor> 15 </factor>
     <axis>
-      <x1-m> 3.02862 </x1-m>
+      <x1-m> 2.98862 </x1-m>
       <y1-m> 3.20752 </y1-m>
       <z1-m> 0.15307 </z1-m>
-      <x2-m> 2.26618 </x2-m>
+      <x2-m> 2.22618 </x2-m>
       <y2-m> 4.85809 </y2-m>
       <z2-m> 0.31319 </z2-m>
     </axis>
