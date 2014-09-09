@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>intporte</object-name>
+    <object-name>barreau</object-name>
+    <object-name>rideau</object-name>
+    <object-name>barreauporte</object-name>
+    <object-name>rideauporte</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitreporte</object-name>
+  </animation>
+  
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreporte</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreporte</object-name>
+  </animation>
+  
+  <!-- Seat -->
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Seat/seat.xml</path>
+    <offsets>
+      <x-m> -0.14274 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.75865 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.22017 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.66987 </z-m>
+    </offsets>
+  </model>
+
+ <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Focke-Wulf-F19-ente/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -2.37715 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.44604 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Ouverture de la porte -->
+  <animation>
+    <name>IntLaPorte</name>
+    <object-name>intporte</object-name>
+    <object-name>intvitreporte</object-name>
+    <object-name>barreauporte</object-name>
+    <object-name>rideauporte</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPorte</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -100 </factor>
+    <axis>
+      <x1-m> -0.66476 </x1-m>
+      <y1-m>  0.38448 </y1-m>
+      <z1-m> -1.06580 </z1-m>
+      <x2-m> -0.66232 </x2-m>
+      <y2-m>  0.38448 </y2-m>
+      <z2-m> -0.16138 </z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>

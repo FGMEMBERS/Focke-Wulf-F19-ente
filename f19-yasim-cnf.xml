@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="f19-base.xml">
+
+  <sim>
+
+    <description>Focke Wulf F19 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">f19-yasim</aero>
+
+  </sim>
+
+</PropertyList>
+
